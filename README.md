@@ -8,7 +8,7 @@ and the Yellow Photoswipe + Blog plugin.
 
 How do I install this?
 ----------------------
-1. Download the [plugin](https://github.com/dieli/LR_Yellow/raw/master/zip/LR_Yellow.zip) .  
+1. Download the [plugin](https://github.com/dieli/LR_Yellow/archive/master.zip) .  
 2. Extract the 'ftp_upload.lrdevplugin' folder to your harddrive
 3. Inside Lightroom go to the plugin manager, click add and navigate to the 'ftp_upload.lrdevplugin' folder
 
