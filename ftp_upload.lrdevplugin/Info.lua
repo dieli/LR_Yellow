@@ -1,5 +1,8 @@
 --[[----------------------------------------------------------------------------
 
+FTP Upload for Yellow CMS, based on the Adobe Sample plugin (see below). Copyright
+for the original part is by Adobe, rest of the code is under GPL.
+
 Info.lua
 Summary information for ftp_upload sample plug-in
 
@@ -25,7 +28,7 @@ return {
 	LrToolkitIdentifier = 'com.adobe.lightroom.export.ftp_upload',
 
 	LrPluginName = LOC "$$$/FTPUpload/PluginName=FTP Upload Sample",
-	
+
 	LrExportServiceProvider = {
 		title = "FTP Upload",
 		file = 'FtpUploadServiceProvider.lua',

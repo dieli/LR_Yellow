@@ -1,5 +1,8 @@
 --[[----------------------------------------------------------------------------
 
+FTP Upload for Yellow CMS, based on the Adobe Sample plugin (see below). Copyright
+for the original part is by Adobe, rest of the code is under GPL.
+
 FtpUploadExportServiceProvider.lua
 Export service provider description for Lightroom FtpUpload uploader
 
@@ -24,23 +27,32 @@ require "FtpUploadTask"
 --============================================================================--
 
 return {
-	
+
 	hideSections = { 'exportLocation' },
 
 	allowFileFormats = nil, -- nil equates to all available formats
-	
+
 	allowColorSpaces = nil, -- nil equates to all color spaces
 
 	exportPresetFields = {
-		{ key = 'putInSubfolder', default = false },
-		{ key = 'path', default = 'photos' },
+		{ key = 'putInSubfolder_image', default = false },
+		{ key = 'putInSubfolder_blog', default = false },
+		{ key = 'path_image', default = '/media/images/' },
+		{ key = 'path_blog', default = '/content/3-blog/' },
 		{ key = "ftpPreset", default = nil },
-		{ key = "fullPath", default = nil },
+		{ key = "fullPath_image", default = nil },
+		{ key = "fullPath_blog", default = nil },
+		{ key = "blog_author", default = 'tester' },
+		{ key = "blog_title", default = 'new' },
+		{ key = "blog_tag", default = "" },
+		{ key = "blog_thumbsize", default = "150" },
+		{ key = "blog_text", default = "Your text here ...\n		[--more--]\n		The link to the pics" },
+
 	},
 
 	startDialog = FtpUploadExportDialogSections.startDialog,
 	sectionsForBottomOfDialog = FtpUploadExportDialogSections.sectionsForBottomOfDialog,
-	
+
 	processRenderedPhotos = FtpUploadTask.processRenderedPhotos,
-	
+
 }
